@@ -20,3 +20,11 @@ function afficherPanier() {
     var panierText = "Panier : " + basket.join(", ");
     alert(panierText);
 }
+
+
+
+
+fetch("https://swapi.dev/api/films/1/")
+.then((response)=> response.json())
+.then((response)=> console.log(response))
+.catch((err)=>  console.error(err))

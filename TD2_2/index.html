@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Film Star Wars</title>
+  </head>
+  <body>
+
+    <h2>Liste des Films</h2>
+    <ul id="film-list">
+      <!-- Liste des films sera ajoutée ici dynamiquement -->
+    </ul>
+
+    <div id="film-details">
+      <h1 id="title"></h1>
+      <p id="opening-crawl"></p>
+      <p><strong>Date de sortie :</strong> <span id="release-date"></span></p>
+      <p><strong>Réalisateur :</strong> <span id="director"></span></p>
+      <p><strong>Producteurs :</strong> <span id="producers"></span></p>
+    </div>
+
+    <script src="databasemovie.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://swapi.dev/api/films")
+          .then((response) => response.json())
+          .then((data) => {
+            createFilmList(data.results);
+          })
+          .catch((error) =>
+            console.error("Erreur lors de la récupération des films:", error)
+          );
+
+        function displayFilmDetails(film) {
+          document.getElementById("title").textContent = film.title;
+          document.getElementById("opening-crawl").textContent = film.opening_crawl;
+          document.getElementById("release-date").textContent = film.release_date;
+          document.getElementById("director").textContent = film.director;
+          document.getElementById("producers").textContent = film.producer;
+        }
+
+        function createFilmList(films) {
+          const filmList = document.getElementById("film-list");
+
+          films.forEach((film) => {
+            const li = document.createElement("li");
+            const link = document.createElement("a");
+
+            link.textContent = `${film.title} (${film.release_date})`;
+            link.href = "#"; // Ajoutez le lien vers la page détaillée du film si nécessaire
+
+            // Ajoutez un gestionnaire d'événements pour afficher les détails du film au clic
+            link.addEventListener("click", function () {
+              displayFilmDetails(film);
+            });
+
+            li.appendChild(link);
+            filmList.appendChild(li);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
