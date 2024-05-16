@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORILLEC - Connexion</title>
+    <link rel="stylesheet" type="text/css" href="../../index.css">
+    <link rel="icon" href="../../images/logo.png" type="image/png">
+    <script src="user.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="../../index.html" class="logo">TORILLEC</a> 
+        <div class="nav-li">
+             <ul>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a class="active" href="connexion.html"><img src="../../Images/user.png" class="user"> Connexion</a></li>
+            </ul>
+        </div>
+        <img src="../../Images/menu.png" alt="menu" class="menu">
+    </nav>
+    <!-- Fin navbar -->
+
+    <!-- Titre -->
+    <h1 class="title">Connexion</h1>
+    <!-- Fin titre -->
+
+        <!-- Card connexion -->
+        <div class="card_connexion">
+            <img src="../../images/logo_entreprise_t.png" style="width:220px" class="image_entreprise">
+            <div class="container">
+                <form method="post" action="connexion.php">
+                    <center>
+                    <label for="mail">E-mail</label><br>
+                    <input type="email" id="mail" name="mail" required><br>
+                    <label for="pwd">Mot de passe</label><br>
+                    <input type="password" id="pwd" name="pwd"  required><br><br>
+                    </center>
+                    <button class="submit" type="submit" name="ok" value="Connexion">Connexion</button><br>
+                </form>
+            </div>
+        </div>
+        <!-- Fin card connexion -->
+
+        <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <p>Les informations de connexion sont incorrectes.</p>
+            <button onclick="fermerModal('errorModal')">Fermer</button>
+        </div>
+    </div>
+
+  </body>
+
+<!-- Script navbar -->
+<script>
+    const menu=document.querySelector(".menu")
+    const navli=document.querySelector(".nav-li")
+
+    menu.addEventListener('click',()=>(
+    navli.classList.toggle('mobile-menu')
+    ))
+</script>
+<!-- Fin script navbar -->
+
+  </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORILLEC - Contact</title>
+    <link rel="stylesheet" type="text/css" href="../index.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="../deconnexion.php" class="logo">TORILLEC</a> 
+         <div class="nav-li">
+             <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="connexion/connexion.html"><img src="../Images/user.png" class="user"> Connexion</a></li>
+            </ul>
+        </div>
+        <img src="../Images/menu.png" alt="menu" class="menu">
+    </nav>
+    <!-- Fin navbar -->
+
+    <!-- Titre -->
+    <h1 class="title">Contactez-nous !</h1>
+    <!-- Fin titre -->
+
+    <!-- Card contact -->
+    <div class="card_contact">
+        <img src="../images/logo_entreprise_t.png" style="width:220px" class="image_entreprise">
+        <div class="container">
+            <form action="contact.php" method="POST">
+                <label for="email">E-mail</label><br>
+                <input type="text" id="email" name="email"><br>
+                <div class="name-fields">
+                    <div class="form-group">
+                        <label for="nom">Nom</label><br>
+                        <input type="text" id="nom" name="nom"><br>
+                        <label for="phone">Téléphone</label><br>
+                        <input type="phone" id="phone" name="phone"><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label><br>
+                        <input type="text" id="prenom" name="prenom"><br>
+                        <label for="text">Demande</label><br>
+                        <input type="text" id="text" name="text" class="text_contact"><br>
+                    </div>
+                </div>
+                <button type="submit">Envoyer</button><br>
+            </form>
+        </div>
+    </div>
+    <!-- Fin card contact -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container_footer">
+            <div class="infos-agence">
+                <h2>Agence TORILLEC</h2>
+                <p>53 Cr Albert Thomas, 69003 Lyon</p>
+                <p>Téléphone : 01 23 45 67 89</p>
+                <p>Email : torillec@agence.com</p>
+            </div>
+            <div class="map">
+                <a href="https://www.google.fr/maps/place/53+Cr+Albert+Thomas,+69003+Lyon/@45.7477113,4.8630703,17z/data=!3m1!4b1!4m6!3m5!1s0x47f4ea7417e5abd9:0x16d2fd217ea46ca7!8m2!3d45.7477113!4d4.8656452!16s%2Fg%2F11b8v4cm0z?entry=ttu"><img src="../Images/loc.png" class="img_loc" title="Google Maps"></a>
+            </div>
+        </div>
+    </footer>
+
+    <section class="footer_section">
+        <div class="container">
+            <p>
+              © 2024 - Tous droits révervés par
+              <a href="../index.html">Torillec Company</a>
+            </p>
+        </div>
+    </section>
+    <!-- Fin footer -->
+    
+</body>
+
+<!-- Script navbar -->
+<script>
+    const menu=document.querySelector(".menu")
+    const navli=document.querySelector(".nav-li")
+
+    menu.addEventListener('click',()=>(
+    navli.classList.toggle('mobile-menu')
+    ))
+</script>
+<!-- Fin script navbar -->
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORILLEC - Accueil</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" href="Images/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+       <a href="deconnexion.php" class="logo">TORILLEC</a> 
+        <div class="nav-li">
+            <ul>
+                <li><a class="active" href="index.html">Accueil</a></li>
+                <li><a href="src/contact.html">Contact</a></li>
+                <li><a href="src/connexion/connexion.html"><img src="Images/user.png" class="user">Connexion</a></li>
+            </ul>
+        </div>
+        <img src="../Images/menu.png" alt="menu" class="menu">
+    </nav>
+    <!-- Fin navbar -->
+
+        <!-- Titre -->
+        <h1 class="title">BIENVENUE !</h1>
+        <p><center>Notre agence TORILLEC vous promet de gérer votre argent de façon très sécurisée et reste à l'écoute en cas de toute autre problème.<br>
+            Notre équipe se fera un plaisir de vous être utile.</center></p>
+        <!-- Fin titre -->
+
+    <!-- Bouton contacter -->
+    <center><a href="src/contact.html" class="btn_contact" style="vertical-align:middle"><span>Contactez-nous</span></a></center>
+    <!-- Fin bouton contacter -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container_footer">
+            <div class="infos-agence">
+                <h2>Agence TORILLEC</h2>
+                <p>53 Cr Albert Thomas, 69003 Lyon</p>
+                <p>Téléphone : 01 23 45 67 89</p>
+                <p>Email : torillec@agence.com</p>
+            </div>
+            <div class="map">
+                <a href="https://www.google.fr/maps/place/53+Cr+Albert+Thomas,+69003+Lyon/@45.7477113,4.8630703,17z/data=!3m1!4b1!4m6!3m5!1s0x47f4ea7417e5abd9:0x16d2fd217ea46ca7!8m2!3d45.7477113!4d4.8656452!16s%2Fg%2F11b8v4cm0z?entry=ttu"><img src="Images/loc.png" class="img_loc" title="Google Maps"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <section class="footer_section">
+        <div class="container">
+            <p>
+                © 2024 - Tous droits révervés par
+                <a href="index.html">Torillec Company</a>
+            </p>
+        </div>
+    </section>
+    <!-- Fin footer -->
+
+</body>
+
+<!-- Script navbar -->
+<script>
+    const menu=document.querySelector(".menu")
+    const navli=document.querySelector(".nav-li")
+
+    menu.addEventListener('click',()=>(
+    navli.classList.toggle('mobile-menu')
+    ))
+</script>
+<!-- Fin script navbar -->
+
+</html>

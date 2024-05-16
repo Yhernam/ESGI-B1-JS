@@ -1,0 +1,112 @@
+*{
+  	margin: 0;
+  	padding: 0;
+  	text-decoration: none;
+  	list-style: none;
+}
+
+body {
+  	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  	background-image: url(../../Images/bg.png);
+}
+
+/* Définit les styles de l'overlay sombre qui couvre la page lorsque la fenêtre contextuelle est ouverte */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+    display: none; 
+}
+
+/*  Définit les styles de l'overlay lorsque la classe "ouverte" est appliquée, permettant à l'overlay de s'afficher */
+#popup-overlay.open{
+    display: block !important;
+}
+
+/* Style pour le contenu de la fenêtre contextuelle, avec un arrière-plan blanc, une largeur maximale et positionné au centre de l'écran */
+.popup-content {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-content p {
+    margin: 20px;
+}
+
+/* Style pour le bouton de sortie en haut à droite de la fenêtre contextuelle, permettant de la fermer */
+.popup-exit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Définit un bloc centré avec une largeur */
+.centered-block {
+    width: 50%;
+    padding: 10px;
+}
+
+/* Stylise un bouton de navigation */
+.btn_nv {
+    background-color: #F8E0BB;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    margin:1%;
+    text-decoration: none;  
+}
+
+/* Effet de survol pour le bouton */
+.btn:hover {
+    background-color: #F8E6D1;
+    transform: translateY(-2px);
+}
+
+/* Effet enfoncé pour le bouton */
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Stylise une icône utilisateur */
+.user {
+    max-width: 15px;
+    margin-right: 5px;
+}
+
+/* Définit le style d'un tableau */
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin-top: 30px;
+	margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+/* Stylise les cellules d'en-tête du tableau avec une bordure légère. */
+table th {
+    border: 0.5px solid rgba(0, 0, 0, 0.060);
+}
